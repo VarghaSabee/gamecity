@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/send', "SendMail@send");
+Route::post('/subscribe', "SendMail@subscribe")->name('subscribe');

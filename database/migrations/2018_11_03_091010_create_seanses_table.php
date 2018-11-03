@@ -14,7 +14,9 @@ class CreateSeansesTable extends Migration
     public function up()
     {
         Schema::create('seanses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
+            $table->dateTime('start');
+            $table->dateTime('end');
             $table->timestamps();
         });
     }

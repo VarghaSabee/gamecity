@@ -17,6 +17,7 @@ class CreateSubscribersTable extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('email')->unique();
+            $table->dateTime("deleted_at")->nullable();
             $table->timestamps();
         });
     }

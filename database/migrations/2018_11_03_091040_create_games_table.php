@@ -14,7 +14,10 @@ class CreateGamesTable extends Migration
     public function up()
     {
         Schema::create('games', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
+            $table->string("name");
+            $table->string("category");
+            $table->float("price");
             $table->timestamps();
         });
     }
